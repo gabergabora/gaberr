@@ -126,7 +126,7 @@ app.all("*",  (req, res, next) => {
 
 app.use(function (req, res) {
     res.status(404);
-    res.render('404', { status: '404', title: 'Error' });
+    res.render('404', { status: '404', title: 'Error ' });
 });
 
 app.use(function (err, req, res, next) {
