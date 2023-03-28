@@ -8,9 +8,6 @@ app.set("view engine", "ejs");
 
 
 
-app.all("*",  (req, res, next) => {
-  res.render("404", { title: "Page Not Found" });
-});
 
 app.get('/', (req, res) => {
     res.send('Home Page Route');
