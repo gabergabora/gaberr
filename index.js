@@ -8,7 +8,7 @@ app.set("view engine", "ejs");
 
 
 
-app.all("*", authController.protect, (req, res, next) => {
+app.all("*",  (req, res, next) => {
   res.render("404", { title: "Page Not Found" });
 });
 
