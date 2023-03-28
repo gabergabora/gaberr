@@ -123,6 +123,18 @@ app.all("*",  (req, res, next) => {
   res.render("404", { title: "Page Not Found" });
 });
 
+app.use(function (req, res) {
+    res.status(404);
+    res.render('404', { status: '404', title: 'Error' });
+});
+
+app.use(function (err, req, res, next) {
+    console.log(err);
+ //   notify.alert(err, getIP(req)).catch();
+    res.status(500);
+    res.render('404', { status: '500', title: 'Error' });
+});
+
 app.listen(PORT, () => {
     console.log(`Express Server running on http://localhost:${PORT}`)
 })
