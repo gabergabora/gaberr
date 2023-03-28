@@ -104,8 +104,8 @@ app.get('/contact', function (req, res) {
     }
 });*/
 
-app.get('/', (req, res) => {
-    res.send('Home Page Route');
+app.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
 });
 
 app.get('/about', (req, res) => {
