@@ -7,6 +7,12 @@ const cookieParser = require("cookie-parser")
 const methodOverride = require("method-override");
 const rateLimit = require('express-rate-limit');
 
+/*
+const Message = require('./models/message');
+const notify = require('./controllers/notify');
+const format = require('./controllers/format');
+*/
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, 'assets')))
@@ -16,7 +22,7 @@ app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(methodOverride('_method'))
-
+/*
 const contactLimiter = rateLimit({
     windowMs: 60000,
     max: 1,
@@ -95,7 +101,7 @@ app.get('/contact', function (req, res) {
             res.render('status', { status: contactStatus, title: 'Contact' });
         }
     }
-});
+});*/
 
 app.get('/', (req, res) => {
     res.send('Home Page Route');
