@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3000;
 const path = require('path');
 
-const errorController = require('./controllers/error');
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, 'assets')))
