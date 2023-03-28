@@ -6,7 +6,7 @@ const path = require('path');
 const errorController = require('./controllers/error');
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'assests')))
 
 
 app.all("*",  (req, res, next) => {
