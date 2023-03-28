@@ -5,9 +5,10 @@ const path = require('path');
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
 const methodOverride = require("method-override");
+/*
 const rateLimit = require('express-rate-limit');
 
-/*
+
 const Message = require('./models/message');
 const notify = require('./controllers/notify');
 const format = require('./controllers/format');
