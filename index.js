@@ -5,10 +5,9 @@ const path = require('path');
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
 const methodOverride = require("method-override");
+
 /*
 const rateLimit = require('express-rate-limit');
-
-
 const Message = require('./models/message');
 const notify = require('./controllers/notify');
 const format = require('./controllers/format');
@@ -131,7 +130,7 @@ app.use(function (req, res) {
 
 app.use(function (err, req, res, next) {
     console.log(err);
- //   notify.alert(err, getIP(req)).catch();
+ ///   notify.alert(err, getIP(req)).catch();
     res.status(500);
     res.render('404', { status: '500', title: 'Error' });
 });
