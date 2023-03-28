@@ -9,9 +9,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, 'assets')))
 
 
-app.all("*",  (req, res, next) => {
-  res.render("404", { title: "Page Not Found" });
-});
+
 
 
 app.get('/', (req, res) => {
@@ -28,6 +26,10 @@ app.get('/portfolio', (req, res) => {
 
 app.get('/contact', (req, res) => {
     res.send('Contact Page Route');
+});
+
+app.all("*",  (req, res, next) => {
+  res.render("404", { title: "Page Not Found" });
 });
 
 app.listen(PORT, () => {
